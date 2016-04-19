@@ -1,11 +1,14 @@
+path = require('path');
+const webpack = require('webpack');
+
 module.exports = {
   entry: [
     './src/index.js'
   ],
   output: {
-    path: __dirname,
-    publicPath: '/',
-    filename: 'bundle.js'
+      path: path.join(__dirname, 'dist'),
+      filename: 'bundle.js',
+      publicPath: '/static/',
   },
   module: {
     loaders: [{
